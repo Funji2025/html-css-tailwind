@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <form>
+        <label for="paym">Metodo de pago</label>
+        <select name="paym" id="paym">
+            <option value="A">American Express terminando en 1099</option>
+            <option value="B">Visa terminando en 4566</option>
+            <option value="C">Discovery terminando en 2346</option>
+        </select>
+        <fieldset>
+            <legend>Metodo de envio</legend>
+        <div>
+            <input type="radio" name="envio" id="dos dias" value="D">
+            <label for="dos dias">Gratis - Dos días de envio</label>
+        </div>
+        <div>
+            <input type="radio" name="envio" id="estandar" value="E">
+            <label for="estandar">Gratis - Envio Estandar (4-5 días laborables)</label>
+        </div>
+        <div>
+            <input type="radio" name="envio" id="sin prisa" value="S">
+            <label for="sin prisa">Gratis - Envio sin prisa (5 días laborables)</label>
+        </div>
+                </fieldset>
+        <div>
+        <label for="gift">Esto es un regalo</label>
+        <input type="checkbox" id="gift" name="gift" checked>
+                </div>
+<button>Realiza tu pedido</button>
+
+    </form>
+</body>
+</html>
