@@ -1,0 +1,11 @@
+.header {
+    color: cornflowerblue;
+}
+
+.active {
+    color: darkslateblue;
+}
+
+h1.active {
+    color: deeppink;
+}

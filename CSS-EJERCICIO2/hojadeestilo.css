@@ -1,21 +1,4 @@
-h1 {
-    color: blueviolet;
-}
-.random h1 {
-    color: darkmagenta;
-}
-*{
-    font-size: 20px;
-}
 
-.Mi-lista + ul {
-    list-style: none;
-}
-
-.nav-link > li {
-    color: firebrick;
-}
-
-.nav-link li a {
+.links li:nth-child(2){
     color: red;
 }
