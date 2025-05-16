@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.clear{
+    clear: both;
+}
+
+h1{
+    font-size: 2.8rem;
+}
+h2{
+    font-size: 3.6rem;
+    padding: 5rem 0rem;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 2.4rem;
+}
+h3{
+    font-size: 2.8rem;
+}
+button{
+    font-size: 1.8rem;
+}
+
+nav{
+    background-color: rgb(115, 148, 182);
+    color: aliceblue;
+    padding: 3rem;
+}
+nav h1{
+    float: left;
+}
+nav ul{
+    float: right;
+    list-style: none;
+}
+nav li{
+    float: left;
+    margin: 0rem 4rem;
+}
+
+.fruit-section{
+    background-image: url("Rainbow6KAppleID.png");
+    height: 80rem;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: darkred;
+    padding-top: 25rem;
+    text-shadow: 3px 3px 10px rgb(175, 56, 56);
+}
+.fruit-section button{
+    margin-top: 6rem;
+    padding: 1rem 4rem;
+    background: rgb(115, 148, 182);
+    border: none;
+}
