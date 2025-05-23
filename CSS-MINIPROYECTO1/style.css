@@ -61,6 +61,32 @@ nav li{
 .fruit-section button{
     margin-top: 6rem;
     padding: 1rem 4rem;
-    background: rgb(115, 148, 182);
+    background: rgb(27, 80, 133);
     border: none;
+    color: aliceblue;
+    cursor: pointer;
+}
+.form-section{
+    text-align: center;
+}
+
+form input, 
+form label, 
+form textarea{
+    display: block;
+    font-size: 2.4rem;
+}
+form input,
+form textarea{
+    margin: 2rem auto;
+    width: 50%;
+}
+form button{
+    margin-bottom: 8rem;
+    padding: 1rem 4rem;
+    background: rgb(27, 80, 133);
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+    width: 50%;
 }

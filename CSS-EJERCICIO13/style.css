@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.container{
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    height: 10rem;
+    flex-basis: 2rem;
+}
+.box1{
+    background: rgb(224, 50, 50);
+    
+}
+.box2{
+    background: rgb(212, 224, 50);
+    
+}
+.box3{
+    background: rgb(99, 224, 50);
+    
+}
+.box4{
+    background: rgb(50, 224, 122);
+    
+}
+.box5{
+    background: rgb(50, 198, 224);
+    
+}
+.box6{
+    background: rgb(50, 120, 224);
+    
+}

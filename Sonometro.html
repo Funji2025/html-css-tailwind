@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba de Audición</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+    
+    body {
+      font-family: 'Orbitron';
+      text-align: center;
+    }
+    
+    @media (min-width: 500px) and (max-width:1024px) {
+
+    div{
+        font-size: calc(1.4rem + 2vw);
+    }
+}
+
+    .indicator {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 20px auto;
+      background-color: grey;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-family: 'Orbitron';
+      color: white;
+    }
+    #resultado {
+      font-size: 2rem;
+      font-family: 'Orbitron';
+      margin: 20px 0;
+    }
+    .test-button {
+      padding: 10px 20px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background-color: #68c96b;
+      font-family: 'Orbitron';
+      color: #0d8d11
+      border: none;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    .test-button:hover{
+      background-color: rgb(63, 240, 101);
+    }
+    .info-section {
+      margin-top: 30px;
+      text-align: center;
+      font-family: 'Orbitron';
+      color: transparent;
+    }
+    input[type="number"] {
+      padding: 10px;
+      font-size: 1rem;
+      width: 200px;
+      font-family: 'Orbitron';
+      margin-bottom: 10px;
+      text-align:center ;
+    }
+
+.fondo{
+        background-image: linear-gradient(rgba(255, 255, 255, 0.733)), url(https://st3.depositphotos.com/7674516/14814/i/450/depositphotos_148143551-stock-photo-abstraction-on-a-background.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: static;
+        background-repeat: no-repeat;
+        height: 125vh;
+        width: 100%;
+    }
+
+    .providencia{
+        width: 110px;
+      height: 130px;
+      
+    }
+
+
+    
+  </style>
+</head>
+<body>
+  <header class="fondo">
+    <section>
+    <img src="https://www.laprovidenciaquito.com/images/nav.jpg" alt="providencia" class="providencia">
+
+  <h1>Evaluación de Audición</h1>
+
+  <div id="resultado">Esperando datos...</div>
+
+  <div class="indicator" id="indicador">0 dB</div>
+
+  <input type="number" id="decibelInput" placeholder="Ingresa nivel dB">
+  <br>
+  <button class="test-button" onclick="evaluarAudicion()">Evaluar</button>
+  <button class="test-button" onclick="reiniciarProceso()">Reiniciar</button>
+
+  <br><br>
+  <a href="https://www.gaes.es/test-auditivo-online" target="_blank">
+    <button class="test-button">Test Salud Auditiva</button>
+  </a>
+  <br><br>
+  <a href="https://www.canva.com/design/DAGoCqW0JnA/V5a-BN1hyegPu2J94e-u3w/view?utm_content=DAGoCqW0JnA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h67d3a57746" target="_blank">
+    <button class="test-button">Infografía</button>
+  </a>
+  <a href="https://view.genially.com/682d33247e26505a34b3ed18/mobile-cuidemos-nuestros-oidos" target="_blank">
+    <button class="test-button">Juego</button>
+  </a>
+  <a href="https://cuidadodelasaludauidtiva.my.canva.site/" target="_blank">
+    <button class="test-button">Diapositivas</button>
+  </a>
+
+  <div class="info-section" id="info-section">
+    <h2>Información sobre el ruido</h2>
+    <p><strong>¿Qué es el ruido?</strong> Es cualquier sonido no deseado que puede interferir con el descanso, concentración o salud.</p>
+    <p><strong>Efectos en la salud:</strong> Pérdida de audición, estrés, trastornos del sueño, problemas cardiovasculares.</p>
+    <p><strong>Consejos:</strong> Usa protección auditiva, evita lugares ruidosos, limita el uso de auriculares a volumen alto.</p>
+    <p><strong>Prevención:</strong> Realiza pruebas auditivas regularmente y mantén buenos hábitos auditivos.</p>
+  </div>
+    
+
+  <script>
+    function iniciarProceso() {
+
+      document.getElementById('info-section').textContent = 'Proceso iniciado. Ingresa el valor de decibeles para evaluar.';
+      document.getElementById('resultado').textContent = 'Proceso iniciado. Ingresa el valor de decibeles para evaluar.';
+    }
+
+    function evaluarAudicion() {
+      const dB = parseInt(document.getElementById('decibelInput').value);
+      const indicador = document.getElementById('indicador');
+      const resultado = document.getElementById('resultado');
+      const infosection = document.getElementById('info-section');
+
+      if (isNaN(dB)) {
+        resultado.textContent = 'Por favor, ingresa un valor válido en decibeles.';
+        indicador.style.backgroundColor = 'grey';
+        indicador.textContent = '0 dB';
+      document.getElementById('info-section').textContent = "none";
+        return;
+      }
+
+      indicador.textContent = `${dB} dB`;
+
+      if (dB < 60) {
+        indicador.style.backgroundColor = 'green';
+        indicador.style.color = '#a4e7a6';
+        resultado.textContent = 'Buena audición';
+      document.getElementById('info-section').style.color = "black";
+
+
+      } else if (dB >= 60 && dB <= 80) {
+        indicador.style.backgroundColor = 'yellow';
+        indicador.style.color = '#d38a03';
+        resultado.textContent = 'Nivel de ruido en alerta';
+      document.getElementById('info-section').style.color = "black";
+      } else {
+        indicador.style.backgroundColor = 'red';
+        indicador.style.color = 'white';
+        resultado.textContent = '¡Peligro! Alto nivel de ruido';
+      document.getElementById('info-section').style.color = "black";
+      }
+    }
+
+    function reiniciarProceso() {
+      document.getElementById('resultado').textContent = 'Esperando datos...';
+      document.getElementById('indicador').style.backgroundColor = 'grey';
+      document.getElementById('indicador').textContent = '0 dB';
+      document.getElementById('decibelInput').value = '';
+      document.getElementById('info-section').style.color = 'transparent';
+        indicador.style.color = 'white';
+    }
+  </script>
+  </section>
+  </header>
+</body>
+</html>
