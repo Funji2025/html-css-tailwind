@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!--Positioning-->
+    <div class="relative w-1/2 h-12 bg-red-200">
+        <p>Parent Element</p>
+        <div class="absolute bottom-0 right-0 bg-red-500">
+            <p>Absolute Child</p>
+        </div>
+    </div>
+
+    <!--Top Left Corner-->
+    <div class="relative h-32 w-32 bg-yellow-100">
+        <div class="absolute left-0 top-0 h-16 w-16 bg-yellow-300"></div>
+    </div>
+
+    <!--Top Right Corner-->
+    <div class="relative h-32 w-32 bg-yellow-100">
+        <div class="absolute right-0 top-0 h-16 w-16 bg-yellow-300"></div>
+    </div>
+
+    <!--Bottom Left Corner-->
+    <div class="relative h-32 w-32 bg-yellow-100">
+        <div class="absolute left-0 bottom-0 h-16 w-16 bg-yellow-300"></div>
+    </div>
+
+    <!--Botto Right Corner-->
+    <div class="relative h-32 w-32 bg-yellow-100">
+        <div class="absolute right-0 bottom-0 h-16 w-16 bg-yellow-300"></div>
+    </div>
+
+    <!--Span Top Edge-->
+    <div class="relative h-32 w-32 bg-yellow-100">
+        <div class="absolute inset-x-0 top-0 h-16 bg-yellow-300"></div>
+    </div>
+
+    <!--Span Left Edge-->
+    <div class="relative h-32 w-32 bg-yellow-100">
+        <div class="absolute inset-y-0 left-0 w-16 bg-yellow-300"></div>
+    </div>
+
+    <!--Span Right Edge-->
+    <div class="relative h-32 w-32 bg-yellow-100">
+        <div class="absolute inset-y-0 right-0 w-16 bg-yellow-300"></div>
+    </div>
+
+    <!--Span Bottom Edge-->
+    <div class="relative h-32 w-32 bg-yellow-100">
+        <div class="absolute inset-x-0 bottom  -0 h-16 bg-yellow-300"></div>
+    </div>
+
+    <!--Display Clases-->
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam <span class="inline font-bold">This is inline</span> omnis animi nobis molestias quis labore consectetur accusantium libero ad repellendus, velit et minima deleniti fugit a voluptatem laboriosam doloremque id facilis eveniet sapiente! Est nemo, molestiae <span class="inline-block font-bold"> This is inline block</span> esse illum optio natus beatae quisquam deserunt temporibus inventore, voluptas <span class="block font-bold">This is block</span>nam laudantium aspernatur. Doloremque provident repudiandae odio voluptates, error neque facilis <span class="hidden font-bold">This is hidden</span>aspernatur animi perspiciatis.
+    </div>
+
+    <!--Z-index-->
+    <div class="relative h-36">
+        <div class="absolute left-10 w-24 h-24 bg-blue-300 z-40">1</div>
+        <div class="absolute w-24 left-20 h-24 bg-blue-400">2</div>
+        <div class="absolute w-24 left-40 h-24 bg-blue-500 z-10">3</div>
+        <div class="absolute w-24 left-60 h-24 bg-blue-600 z-20">4</div>
+        <div class="absolute w-24 left-80 h-24 bg-blue-700 z-30">5</div>
+    </div>
+
+    <!--Floats-->
+    <div class="1/2">
+        <img class="h-48 w-48 float-left m-5" src="istockphoto-184276818-612x612.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nesciunt, dolores consectetur voluptatum quas doloremque, eligendi officia enim cumque a, temporibus nemo amet nam eos? Fuga nisi explicabo minus voluptate?</p>
+    </div>
+        
+</body>
+</html>
